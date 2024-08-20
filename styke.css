@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppin', sans-serif;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 600;
+    margin-right: auto;
+
+}
+
+.navbar a {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+    margin-right: 35px;
+    transition: .5s;
+
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #37a1f2;
+
+}
+
+
+/* Icon */
+
+.toggle-icon {
+    display: flex;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 2rem;
+}
+
+.home-content h3 span {
+    color: #37a1f2;
+}
+
+.home-content p {
+    max-width: 495px;
+    font-size: 1rem;
+    margin: 15px 0;
+
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #37a1f2;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 1.25rem;
+    color: #37a1f2;
+    margin: 5px 15px 25px 0;
+    transition: .3s;
+
+
+}
+
+.social-media a:hover {
+    background: #37a1f2;
+    color: #f0f3fd;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 32px;
+    margin-top: 30px;
+    background: #37a1f2;
+    border: 2px solid #37a1f2;
+    border-radius: 48px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, -1);
+    color: #f0f3fd;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .3s;
+
+}
+
+.btn:hover {
+    background: transparent;
+    color: #37a1f2;
+}
+
+
+.home-img img {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    width: 72%;
+}
+
+/* Default light mode styles */
+.container {
+    position: relative;
+    background: #f0f3f0;
+    color: #333;
+    transition: 0.6s;
+}
+
+/* Dark mode styles */
+.container.dark-mode-active {
+    background-color: #15202b;
+    color: #ffffff;
+    transition: 0.6s;
+}
+
+.container.dark-mode-active .logo,
+.container.dark-mode-active .navbar a {
+    color: #ffffff;
+}
+
+.container.dark-mode-active .logo,
+.container.dark-mode-active .navbar a:hover {
+    color: #37a1f2;
+    ;
+}
+
+.container.dark-mode-active .home-content h3 span{
+    color: #37a1f2;
+}
+
+/* Adjust social media icons for dark mode */
+.container.dark-mode-active .social-media a {
+    border-color: #fff;
+    color: #fff;
+}
+
+.container.dark-mode-active .social-media a:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Adjust button styles for dark mode */
+.container.dark-mode-active .btn {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.container.dark-mode-active .btn:hover {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Adjust the home content (h1, h3, p) colors for dark mode */
+.container.dark-mode-active .home-content h1,
+.container.dark-mode-active .home-content h3,
+.container.dark-mode-active .home-content p {
+    color: #fff;
+}
