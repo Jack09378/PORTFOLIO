@@ -10,6 +10,60 @@
     font-family: 'Poppin', sans-serif;
 }
 
+body{
+    width: 100%;
+    /* max-width: 1280px; */
+    margin: 0 auto;
+}
+
+.home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+}
+
+.right{
+    /* background:url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+    background: url("light.png");
+    width: 380px;
+    height: 380px;
+    background-size: cover;
+    background-position: center center;
+    margin: 20px;
+    box-shadow: 0 5px 5px 5px;
+    animation: ani 5s ease-in-out infinite;
+        /* other styles */
+    transition: all 1s ease-in-out;
+
+}
+
+
+/* mistake */
+/* 
+@keyframes ani {
+    
+    0%, 100% {
+        border-radius:60% 40% 30% 70% / 60%  30% 70% 40%;
+        
+    }
+
+    50%{
+        borber-radius: 30% 60% 70% 40% / 50%  60% 30% 60%;
+    }
+} */
+
+@keyframes ani {
+
+    0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+
 
 .header {
     position: fixed;
@@ -83,8 +137,9 @@
 
 .home-content p {
     max-width: 495px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 15px 0;
+    font-weight: 540;
 
 }
 
