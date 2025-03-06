@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+    font-family: "Special Elite";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    padding: 10px 50px ;
+    background: #fff;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+nav.navbar {
+    display: flex; /* Ensure navbar items are in a flex container */
+    gap: 30px; /* Space between navigation links */
+}
+
+nav.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav.navbar a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+.toggle-icon a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.main {
+    padding: 20px;
+}
+
+.sec1 {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 50px ;
+    height: calc(100vh - 60px);
+
+}
+
+/* HOME CONTENT */
+
+.home-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+
+
+.home-content h3 {
+    font-size: 2rem;
+}
+.home-content h3 span {
+    color: #37a1f2;
+}
+
+.home-content p {
+    max-width: 495px;
+    font-size: 1.1rem;
+    margin: 15px 0;
+    font-weight: 540;
+
+}
+
+.social-media a {
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    color: #000;
+    margin: 5px 15px 25px 0;
+    transition: .3s;
+
+
+}
+
+.social-media a:hover {
+    background: #000;
+    color: #f0f3fd;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 32px;
+    background: #000;
+    border: 2px solid #000;
+    border-radius: 48px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, -1);
+    color: #f0f3fd;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .3s;
+
+}
+
+.btn:hover {
+    background: transparent;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+.des, .protimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 380px;
+    padding: 20px; /* Reduced padding for better fit */
+    background-color: #fff; /* Ensure background is set */
+}
+
+.home-img {
+    background: url("light.png");
+    width: 380px;
+    height: 380px;
+    background-size: cover;
+    background-position: center center;
+    margin: 20px;
+    box-shadow: 0 5px 5px 5px;
+    animation: ani 5s ease-in-out infinite;
+        /* other styles */
+    transition: all 1s ease-in-out;
+}
+ 
+@keyframes ani {
+
+    0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 760px) {
+  
+
+* {
+    font-family: "Special Elite";
+    
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+    .sec1 {
+        grid-template-columns: 1fr;
+    }
+
+    header.head {
+        flex-direction: column; /* Stack logo and navbar vertically on small screens */
+        height: auto;
+        padding: 0px 10px;
+    }
+    .logo {
+      display: none;
+    }
+
+    nav.navbar , .toggle-icon {
+        justify-content: center; /* Center navbar items */
+        margin-top: 10px;
+    }
+    
+    .sec1{
+        margin-top: 25px;
+    }
+
+    .home-content h1,
+    .home-content h3,
+    .home-content h3 span,
+    .home-content p,
+    .social-media {
+        text-align: center;
+    }
+    
+
+    .home-content .btn {
+        display: block;
+        margin: 20px auto; /* Centers the button horizontally */
+    }
+}
+
+
+
+
+/* Dark mode styles */
+.container.dark-mode-active {
+    background-color: #15202b;
+    color: #ffffff;
+    transition: 0.6s;
+    
+}
+
+.container.dark-mode-active .head{
+    background-color: transparent;
+}
+
+.container.dark-mode-active .logo,
+.container.dark-mode-active .navbar a {
+
+    color: #ffffff;
+}
+
+.container.dark-mode-active .toggle-icon a{
+  
+  color:#ffffff ;
+}
+
+.container.dark-mode-active .logo,
+.container.dark-mode-active .navbar a:hover {
+    color: #37a1f2;
+    ;
+}
+
+.container.dark-mode-active .des{
+    background-color: transparent;
+}
+
+.container.dark-mode-active .protimg{
+    background-color: transparent;
+}
+
+.container.dark-mode-active .home-content h3 span{
+    color: #37a1f2;
+}
+
+/* Adjust social media icons for dark mode */
+.container.dark-mode-active .social-media a {
+    border-color: #fff;
+    color: #fff;
+}
+
+.container.dark-mode-active .social-media a:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Adjust button styles for dark mode */
+.container.dark-mode-active .btn {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.container.dark-mode-active .btn:hover {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Adjust the home content (h1, h3, p) colors for dark mode */
+.container.dark-mode-active .home-content h1,
+.container.dark-mode-active .home-content h3,
+.container.dark-mode-active .home-content p {
+    color: #fff;
+}
+
+
+/* CHANGE IN IMG BG */
+
+.container.dark-mode-active .right {
+    background-color: #f0f3f0;
+    box-shadow: 0 5px 5px 5px;
+}
