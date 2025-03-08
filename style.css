@@ -27,8 +27,8 @@ header{
 }
 
 nav.navbar {
-    display: flex; /* Ensure navbar items are in a flex container */
-    gap: 30px; /* Space between navigation links */
+    display: flex; 
+    gap: 30px;
 }
 
 nav.navbar a {
@@ -40,7 +40,7 @@ nav.navbar a {
 }
 
 nav.navbar a:hover {
-    color: #007BFF; /* Change color on hover */
+    color: #007BFF; 
 }
 
 .toggle-icon a {
@@ -145,8 +145,8 @@ nav.navbar a:hover {
     justify-content: center;
     align-items: center;
     height: 380px;
-    padding: 20px; /* Reduced padding for better fit */
-    background-color: #fff; /* Ensure background is set */
+    padding: 20px; 
+    background-color: #fff;
 }
 
 .home-img {
@@ -174,6 +174,66 @@ nav.navbar a:hover {
 }
 
 
+/* Media query for screens 480px*/
+@media (max-width: 480px) {
+    header.head {
+        padding: 10px 10px;
+    }
+
+    .logo {
+        font-size: 1.2rem; 
+    }
+
+    nav.navbar a {
+        font-size: 0.9rem; 
+        gap: 15px; 
+    }
+
+    .toggle-icon a {
+        font-size: 1rem; 
+    }
+
+    .sec1 {
+        padding: 10px 20px;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .home-content p {
+        font-size: 0.9rem;
+        max-width: 100%; 
+    }
+
+    .social-media a {
+        font-size: 1rem; 
+        margin: 5px 10px 20px 0; 
+    }
+
+    .btn {
+        padding: 8px 24px;
+        font-size: 0.9rem;
+    }
+
+    .des, .protimg {
+        height: 300px;
+        padding: 10px;
+    }
+
+    .home-img {
+        width: 300px; 
+        height: 300px; 
+    }
+
+    .home-content .btn {
+        margin: 15px auto; 
+    }
+}
 
 
 
@@ -183,30 +243,34 @@ nav.navbar a:hover {
 
 * {
     font-family: "Special Elite";
-    
-    padding: 10px 0px;
+    padding: 0;
+
     box-sizing: border-box;
 }
     .sec1 {
         grid-template-columns: 1fr;
     }
 
+
     header.head {
-        flex-direction: column; /* Stack logo and navbar vertically on small screens */
+        flex-direction: column;
         height: auto;
-        padding: 0px 10px;
+        padding: 10px 0px;
     }
     .logo {
       display: none;
     }
 
+
+
     nav.navbar , .toggle-icon {
-        justify-content: center; /* Center navbar items */
+        justify-content: center; 
         margin-top: 10px;
+        
     }
     
     .sec1{
-        margin-top: 25px;
+        margin-top: 30px;
     }
 
     .home-content h1,
@@ -214,13 +278,22 @@ nav.navbar a:hover {
     .home-content h3 span,
     .home-content p,
     .social-media {
-        text-align: center;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .social-media{
+        font-size: 1.2rem;
     }
     
 
     .home-content .btn {
         display: block;
-        margin: 20px auto; /* Centers the button horizontally */
+        margin: 20px auto; 
+    }
+
+    .protimg{
+        margin-top: 20px;
     }
 }
 
@@ -237,6 +310,10 @@ nav.navbar a:hover {
 
 .container.dark-mode-active .head{
     background-color: transparent;
+}
+
+.container.dark-mode-active nav.navbar{
+    font-weight: 100;
 }
 
 .container.dark-mode-active .logo,
@@ -268,7 +345,6 @@ nav.navbar a:hover {
     color: #37a1f2;
 }
 
-/* Adjust social media icons for dark mode */
 .container.dark-mode-active .social-media a {
     border-color: #fff;
     color: #fff;
@@ -279,7 +355,6 @@ nav.navbar a:hover {
     color: #000;
 }
 
-/* Adjust button styles for dark mode */
 .container.dark-mode-active .btn {
     background: #fff;
     color: #000;
@@ -292,7 +367,6 @@ nav.navbar a:hover {
     border-color: #fff;
 }
 
-/* Adjust the home content (h1, h3, p) colors for dark mode */
 .container.dark-mode-active .home-content h1,
 .container.dark-mode-active .home-content h3,
 .container.dark-mode-active .home-content p {
@@ -300,7 +374,7 @@ nav.navbar a:hover {
 }
 
 
-/* CHANGE IN IMG BG */
+
 
 .container.dark-mode-active .right {
     background-color: #f0f3f0;
